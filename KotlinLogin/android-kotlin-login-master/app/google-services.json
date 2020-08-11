@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971374596189",
+    "firebase_url": "https://logincodelab-6342.firebaseio.com",
+    "project_id": "logincodelab-6342",
+    "storage_bucket": "logincodelab-6342.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971374596189:android:65a70fe4c4eda6338dbdb4",
+        "android_client_info": {
+          "package_name": "com.example.android.firebaseui_login_sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971374596189-jns85cgibt82p0ktecmc1c9s7d74q3t2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPDoYt8abq9JtPTAIyjESP5YryQfj50_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971374596189-jns85cgibt82p0ktecmc1c9s7d74q3t2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
