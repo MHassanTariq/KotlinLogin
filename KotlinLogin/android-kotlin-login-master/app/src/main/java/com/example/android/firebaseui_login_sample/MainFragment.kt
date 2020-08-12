@@ -50,8 +50,14 @@ class MainFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
         binding.welcomeText.text = viewModel.getFactToDisplay(requireContext())
         binding.authButton.text = getString(R.string.login_btn)
-
+        settingOnClickListeners()
         return binding.root
+    }
+
+    private fun settingOnClickListeners() {
+        binding.settingsBtn.setOnClickListener {
+            findNavController().navigate(R.id.settingsFragment)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -56,7 +56,15 @@ class LoginFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(
             inflater, R.layout.fragment_login, container, false
         )
-
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
+            navController.popBackStack(R.id.mainFragment, false)
+        }
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer{
+            when(it) {
+                LoginViewModel.AuthenticationState.AUTHENTICATED ->
+                    findNavController().popBackStack()
+            }
+        })
         binding.authButton.setOnClickListener { launchSignInFlow() }
 
         return binding.root

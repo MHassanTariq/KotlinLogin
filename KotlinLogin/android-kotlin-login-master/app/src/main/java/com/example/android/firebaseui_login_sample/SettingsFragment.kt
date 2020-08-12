@@ -21,6 +21,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceFragmentCompat
 
@@ -39,5 +40,18 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val navController = findNavController()
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer {
+            when(it) {
+                LoginViewModel.AuthenticationState.AUTHENTICATED -> Log.d(TAG,"User is authenticated")
+                LoginViewModel.AuthenticationState.UNAUTHENTICATED -> redirectToLoginScreen(navController)
+                else -> Log.d(TAG, "A very much likely impossible state to reach")
+            }
+
+        })
+    }
+
+    private fun redirectToLoginScreen(navController: NavController) {
+        navController.navigate(R.id.loginFragment)
     }
 }

@@ -35,7 +35,18 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@string/login_button_text"/>
-
+        <TextView
+            android:id="@+id/settings_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/settings_btn"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"
+            app:layout_constraintRight_toRightOf="parent"/>
         <TextView
                 android:id="@+id/welcome_text"
                 android:layout_width="wrap_content"
